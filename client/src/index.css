@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #09090b;
+}
+
+*::-webkit-scrollbar {
+  width: 7px;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #27272a;
+}
+
+
+.calc {
+  height: calc(100vh - 56px);
+}
+
+
+
+.dashbord {
+  border-top-left-radius: 0px;
+  --tw-bg-opacity: 1;
+  border-top: solid 2px rgb(55 65 81 / var(--tw-bg-opacity));
+  border-left: solid 1px rgb(55 65 81 / var(--tw-bg-opacity));
+  overflow-y: scroll;
+}
+
+@media (min-width: 768px) {
+  .dashbord {
+    border-top-left-radius: 10px;
+  }
+}
+
+[type='text']:focus,
+[type='email']:focus,
+[type='url']:focus,
+[type='password']:focus,
+[type='number']:focus,
+[type='date']:focus,
+[type='datetime-local']:focus,
+[type='month']:focus,
+[type='search']:focus,
+[type='tel']:focus,
+[type='time']:focus,
+[type='week']:focus,
+[multiple]:focus,
+textarea:focus,
+select:focus {
+  outline: 0px !important;
+  outline-offset: 0px !important;
+  box-shadow: none !important;
+}
+
+.loader {
+  display: block;
+  --height-of-loader: 4px;
+  --loader-color: rgb(255, 255, 255);
+  width: 130px;
+  height: var(--height-of-loader);
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  background: var(--loader-color);
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 30px;
+  animation: moving 1s ease-in-out infinite;
+}
+
+@keyframes moving {
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+    right: 0;
+    left: unset;
+  }
+}
